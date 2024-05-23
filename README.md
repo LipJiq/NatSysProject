@@ -1,11 +1,11 @@
 # Net&Sys Assignment: Running Containers for Application Development
 
-Group Name: __Fill your team name__. 
+Group Name: __BilisMerah__. 
 
 Team Mates:
-1. __Fill name__ and __matric no__
-2. __Fill name__ and __matric no__
-3. __Fill name__ and __matric no__
+1. __Muhammad Alif Haziq Bin Mohd Razmi__ __(2110091)__
+2. __Muhammad Aliff Iman Bin Abd Rasid__ __(2110487)__
+
 
 ## Rules
 1. You are allowed to have **3 group** members.
@@ -22,7 +22,7 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __Fill answer here__.
+1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __https://github.com/LipJiq/NatSysProject.git__.
 2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
 
 
@@ -55,7 +55,7 @@ Team Mates:
 
 ***Questions:***
 
-1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Fill answer here__.
+1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Linux - Ubuntu__.
 2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __Fill answer here__.
 3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
 
