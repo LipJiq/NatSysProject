@@ -108,16 +108,43 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
 10. Run the command **uname -a**. ***(1 mark)*** .
 
     <img src="./images/uname-a.png" width="40%">
-11. What is the available free memory in the system. ***(1 mark)*** __The available free memomry is 357Mi__.
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __the available disk space mounted on /workspace is 16673996 1K-block (approximate 15.9 Gi - 16 Gi)__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __The version is 6.5.0-1021-azure while x86_64 is the hardware architecture__.
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
-__"ls": This command lists the files and directories in the current directory without any additional information. It typically shows just the names of the files and directories__.
-__"ls -asl": This command provides a more detailed listing. Breaking down the options: -a: Shows all files, including hidden files (those whose names begin with a dot .). -s: Displays the size of each file in blocks.-l: Uses a long listing format, which includes additional details such as permissions, number of links, owner, group, size, and last modification time for each file.__
+11. What is the available free memory in the system. ***(1 mark)*** 
 
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __The TLB size of the virtual CPU is 2560 4K pages for processor 0 and 1__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __The CPU speed is 2422.575 MHz for processor 0 while for processor 1 it is 2414.454 MHz__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __The top running process that consume the most CPU cycles is PID 546 which is node with 1.3%__.
+    __- The available free memory is 357Mi__.
+
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** 
+
+    __- The available disk space mounted on /workspace is 16673996 1K-block (approximate 15.9 Gi - 16 Gi)__.
+
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** 
+
+    __- The version is 6.5.0-1021-azure while x86_64 is the hardware architecture__.
+
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 
+
+    __- "ls": This command lists the files and directories in the current directory without any additional information. It typically shows just the names of the files and directories__.
+
+    __- "ls -asl": This command provides a more detailed listing.__
+
+    __Breaking down the options:__
+
+    __-a: Shows all files, including hidden files (those whose names begin with a dot .).__
+
+    __-s: Displays the size of each file in blocks.__
+
+    __-l: Uses a long listing format, which includes additional details such as permissions, number of links, owner, group, size, and last modification time for each file.__
+
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
+
+    __- The TLB size of the virtual CPU is 2560 4K pages for processor 0 and 1__.
+
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
+
+    __- The CPU speed is 2422.575 MHz for processor 0 while for processor 1 it is 2414.454 MHz__.
+
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
+
+    __- The top running process that consume the most CPU cycles is PID 546 which is node with 1.3%__.
 
 ## Running your own container instance.
 
