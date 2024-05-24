@@ -91,9 +91,9 @@ Look at the TERMINAL tab. Run the following commands and provide the output here
 __"ls": This command lists the files and directories in the current directory without any additional information. It typically shows just the names of the files and directories__.
 __"ls -asl": This command provides a more detailed listing. Breaking down the options: -a: Shows all files, including hidden files (those whose names begin with a dot .). -s: Displays the size of each file in blocks.-l: Uses a long listing format, which includes additional details such as permissions, number of links, owner, group, size, and last modification time for each file.__
 
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __The TLB size of the virtual CPU is 2560 4K pages for processor 0 and 1__.
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __The CPU speed is 2422.575 MHz for processor 0 while for processor 1 it is 2414.454 MHz__.
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __The top running process that consume the most CPU cycles is PID 546 which is node with 1.3%__.
 
 ## Running your own container instance.
 
