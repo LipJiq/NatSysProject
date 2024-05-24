@@ -258,6 +258,37 @@ sudo chown -R codespace:codespace myroot
 
 ```
 *** __Fill answer here__.***
+```bash
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ ls -asl
+total 16
+4 drwxrwxrwx+ 3 codespace codespace 4096 May 24 15:44 .
+4 drwxrwxrwx+ 5 codespace root      4096 May 24 14:42 ..
+4 drwxrwxrwx+ 3 root      root      4096 May 24 15:05 .local
+4 -rw-rw-rw-  1 root      root       171 May 24 15:07 bilismerah.txt
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ chmod u+x bilismerah.txt
+chmod: changing permissions of 'bilismerah.txt': Operation not permitted
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ cd ..
+@LipJiq ➜ /workspaces/NatSysProject (main) $ sudo chown -R codespace:codespace myroot
+
+@LipJiq ➜ /workspaces/NatSysProject (main) $ cd myroot
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ ls -asl
+total 16
+4 drwxrwxrwx+ 3 codespace codespace 4096 May 24 15:44 .
+4 drwxrwxrwx+ 5 codespace root      4096 May 24 14:42 ..
+4 drwxrwxrwx+ 3 codespace codespace 4096 May 24 15:05 .local
+4 -rw-rw-rw-  1 codespace codespace  171 May 24 15:07 bilismerah.txt
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ chmod u+x bilismerah.txt
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ ls -asl
+total 16
+4 drwxrwxrwx+ 3 codespace codespace 4096 May 24 15:44 .
+4 drwxrwxrwx+ 5 codespace root      4096 May 24 14:42 ..
+4 drwxrwxrwx+ 3 codespace codespace 4096 May 24 15:05 .local
+4 -rwxrw-rw-  1 codespace codespace  171 May 24 15:07 bilismerah.txt
+
+```
 
 ## You are on your own, create your own static webpage
 
