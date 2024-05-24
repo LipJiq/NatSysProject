@@ -75,27 +75,39 @@ codespace
 Look at the TERMINAL tab. Run the following commands and provide the output here. 
 
 1. Run the command **pwd** . ***(1 mark)*** .
-    <img src="./images/pwd.png" width="20%">
+
+    <img src="./images/pwd.png" width="40%">
 2. Run the command **cat /etc/passwd** . ***(1 mark)*** .
-    <img src="./images/catetcpass.png" width="20%">
+
+    <img src="./images/catetcpass.png" width="40%">
 3. Run the command **df** . ***(1 mark)*** .
-    <img src="./images/df.png" width="20%">
+
+    <img src="./images/df.png" width="40%">
 4. Run the command **du** . ***(1 mark)*** .
-    <img src="./images/du.png" width="20%">
-    <img src="./images/du2.png" width="20%">
+
+    <img src="./images/du.png" width="40%">
+
+    <img src="./images/du2.png" width="40%">
 5. Run the command **ls** . ***(1 mark)*** .
-    <img src="./images/ls.png" width="20%">
+
+    <img src="./images/ls.png" width="40%">
 6. Run the command **ls -asl** . ***(1 mark)*** .
-    <img src="./images/lsasl.png" width="20%">
+
+    <img src="./images/lsasl.png" width="40%">
 7. Run the command **free -h** . ***(1 mark)*** .
-    <img src="./images/free-h.png" width="20%">
+
+    <img src="./images/free-h.png" width="40%">
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** .
-    <img src="./images/catcpuinfo.png" width="20%">
-    <img src="./images/catcpu2info.png" width="20%">
+
+    <img src="./images/catcpuinfo.png" width="40%">
+
+    <img src="./images/catcpu2info.png" width="40%">
 9. Run the command **top** and type **q** to quit. ***(1 mark)*** .
-    <img src="./images/top.png" width="20%">
+
+    <img src="./images/top.png" width="40%">
 10. Run the command **uname -a**. ***(1 mark)*** .
-    <img src="./images/uname-a.png" width="20%">
+
+    <img src="./images/uname-a.png" width="40%">
 11. What is the available free memory in the system. ***(1 mark)*** __The available free memomry is 357Mi__.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __the available disk space mounted on /workspace is 16673996 1K-block (approximate 15.9 Gi - 16 Gi)__.
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __The version is 6.5.0-1021-azure while x86_64 is the hardware architecture__.
