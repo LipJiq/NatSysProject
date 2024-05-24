@@ -333,6 +333,25 @@ docker network create rednet`
 docker run -itd --net bluenet --name c1 busybox sh
 docker run -itd --net rednet --name c2 busybox sh
 ```
+
+```bash
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network create bluenet
+7659b036408fdc4e4a4a615d0b3521128cb0feb18e767c1fce1af892382078cf
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network create rednet
+c38e0c04e87199a493c25ee46a07af694d52e8dd7e4b4b3363c3415175782ded
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker run -itd --net bluenet --name c1 busybox sh
+Unable to find image 'busybox:latest' locally
+latest: Pulling from library/busybox
+ec562eabd705: Pull complete 
+Digest: sha256:5eef5ed34e1e1ff0a4ae850395cbf665c4de6b4b83a32a0bc7bcb998e24e7bbb
+Status: Downloaded newer image for busybox:latest
+cacaf66fc33262802cd8e70ea0b3aed6bff2f03ad45a9ac4e6293a06cea4ae67
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker run -itd --net rednet --name c2 busybox sh
+c9d1303c0e3e35ab7fae69261bbdfef88ff66fa8d6230133706bc6933688a6b6
+```
 ***Questions:***
 
 1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Fill answer here__.
