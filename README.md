@@ -805,7 +805,34 @@ docker network connect bridgenet c1
 docker network connect bridgenet c2
 docker exec c1 ping c2
 ```
+```bash
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network create bridgenet
+7adb5970c0397bc78cef1d038d210973cd88580613002aca91a57f6fd01b83b2
 
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network connect bridgenet c1
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network connect bridgenet c2
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network ls
+NETWORK ID     NAME        DRIVER    SCOPE
+7659b036408f   bluenet     bridge    local
+861bbcf594e5   bridge      bridge    local
+7adb5970c039   bridgenet   bridge    local
+0d1b3df49e0f   host        host      local
+a43df4244db8   none        null      local
+c38e0c04e871   rednet      bridge    local
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping 172.19.0.1
+PING 172.19.0.1 (172.19.0.1): 56 data bytes
+64 bytes from 172.19.0.1: seq=0 ttl=64 time=0.082 ms
+64 bytes from 172.19.0.1: seq=1 ttl=64 time=0.077 ms
+64 bytes from 172.19.0.1: seq=2 ttl=64 time=0.113 ms
+64 bytes from 172.19.0.1: seq=3 ttl=64 time=0.073 ms
+64 bytes from 172.19.0.1: seq=4 ttl=64 time=0.071 ms
+^C
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping 172.19.0.2
+^C
+```
 ## What to submit
 
 1. Make sure to commit all changes on your source control, and make sure your source control is sync to the repository. 
