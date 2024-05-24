@@ -229,7 +229,28 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** 
+```bash 
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker run --detach -it -v /workspaces/NatSysProject/myroot:/root debian
+1b87f0c4d53beebd6aeb596210808bd4402b916c3ceb365eb18a68de272d27d8
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+1b87f0c4d53b   debian    "bash"    9 minutes ago   Up 9 minutes             affectionate_mayer
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec -i -t affectionate_mayer /bin/bash
+
+root@1b87f0c4d53b:/# cd /root
+root@1b87f0c4d53b:~# nano bilismerah.txt
+root@1b87f0c4d53b:~# exit
+
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ ls -asl
+total 16
+4 drwxrwxrwx+ 3 codespace codespace 4096 May 24 15:08 .
+4 drwxrwxrwx+ 5 codespace root      4096 May 24 14:42 ..
+4 drwxrwxrwx+ 3 root      root      4096 May 24 15:05 .local
+4 -rw-rw-rw-  1 root      root       171 May 24 15:07 bilismerah.txt
+```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
