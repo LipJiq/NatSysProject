@@ -4,7 +4,7 @@ Group Name: __BilisMerah__.
 
 Team Mates:
 1. __Muhammad Alif Haziq Bin Mohd Razmi__ __(2110091)__
-2. __Muhammad Aliff Iman Bin Abd Rasid nampak tak?__ __(2110487)__
+2. __Muhammad Aliff Iman Bin Abd Rasid__ __(2110487)__
 
 
 ## Rules
@@ -294,13 +294,33 @@ total 16
 
 1. Create a directory called webpage in your host machine
 2. Inside the directory, create a page index.html, with any content you would like
+```
+@Alepiimanz ➜ /workspaces/NatSysProject (main) $ mkdir webpage
+@Alepiimanz ➜ /workspaces/NatSysProject (main) $ cd webpage
+@Alepiimanz ➜ /workspaces/NatSysProject/webpage (main) $ touch index.html
+```
 3. Then, run the apache webserver and mount the webpage directory to it. Hint:
 ```bash
 ## the -p 8080:80 flag points the host port 8080 to the container port 80
 
 docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ -p 8080:80 httpd
 ```
-
+```
+@Alepiimanz ➜ /workspaces/NatSysProject/webpage (main) $ pwd 
+/workspaces/NatSysProject/webpage
+@Alepiimanz ➜ /workspaces/NatSysProject/webpage (main) $ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ -p 8080:80 httpd
+Unable to find image 'httpd:latest' locally
+latest: Pulling from library/httpd
+09f376ebb190: Pulling fs layer 
+dab55b4abfc3: Pulling fs layer 
+4f4fb700ef54: Pull complete 
+1a6d0283f224: Pull complete 
+1abf9110528c: Pull complete 
+7bacb8f85f3a: Pull complete 
+Digest: sha256:43c7661a3243c04b0955c81ac994ea13a1d8a1e53c15023a7b3cd5e8bb25de3c
+Status: Downloaded newer image for httpd:latest
+2fe007262a391f854f1073b77a4cb78571e120416cfc67975feefe5655d1ac10
+```
 4. If it works, codespace will trigger a port assignment and provide a URL for you to access your webpage like the one below.
 
  <img src="./images/websitelink.png" width="70%">
@@ -314,9 +334,9 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)***
-3. What port is open for http protocol on the host machine? ***(1 mark)***
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Everyone can read and write at all files but cannot execute them. The user id for the owner is 1000 and group id is 1000 where it belongs to codespace__.
+2. What port is the apache web server running. ***(1 mark)*** port 80
+3. What port is open for http protocol on the host machine? ***(1 mark)*** port 8080
 
 ## Create SUB Networks
 
