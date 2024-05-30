@@ -294,11 +294,6 @@ total 16
 
 1. Create a directory called webpage in your host machine
 2. Inside the directory, create a page index.html, with any content you would like
-```
-@Alepiimanz ➜ /workspaces/NatSysProject (main) $ mkdir webpage
-@Alepiimanz ➜ /workspaces/NatSysProject (main) $ cd webpage
-@Alepiimanz ➜ /workspaces/NatSysProject/webpage (main) $ touch index.html
-```
 3. Then, run the apache webserver and mount the webpage directory to it. Hint:
 ```bash
 ## the -p 8080:80 flag points the host port 8080 to the container port 80
@@ -306,20 +301,13 @@ total 16
 docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ -p 8080:80 httpd
 ```
 ```
-@Alepiimanz ➜ /workspaces/NatSysProject/webpage (main) $ pwd 
+@LipJiq ➜ /workspaces/NatSysProject (main) $ mkdir webpage
+@LipJiq ➜ /workspaces/NatSysProject (main) $ cd webpage
+@LipJiq ➜ /workspaces/NatSysProject/webpage (main) $ touch index.html
+@LipJiq ➜ /workspaces/NatSysProject/webpage (main) $ pwd
 /workspaces/NatSysProject/webpage
-@Alepiimanz ➜ /workspaces/NatSysProject/webpage (main) $ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ -p 8080:80 httpd
-Unable to find image 'httpd:latest' locally
-latest: Pulling from library/httpd
-09f376ebb190: Pulling fs layer 
-dab55b4abfc3: Pulling fs layer 
-4f4fb700ef54: Pull complete 
-1a6d0283f224: Pull complete 
-1abf9110528c: Pull complete 
-7bacb8f85f3a: Pull complete 
-Digest: sha256:43c7661a3243c04b0955c81ac994ea13a1d8a1e53c15023a7b3cd5e8bb25de3c
-Status: Downloaded newer image for httpd:latest
-2fe007262a391f854f1073b77a4cb78571e120416cfc67975feefe5655d1ac10
+@LipJiq ➜ /workspaces/NatSysProject/webpage (main) $ docker run --detach -v /workspaces/NatSysProject/webpage:/usr/local/apache2/htdocs/ -p 8080:80 httpd
+5785f03e2602a5d17d0d51dff2ca1cffd5fe7ffa3a4cea9c5e9beae9b091e39e
 ```
 4. If it works, codespace will trigger a port assignment and provide a URL for you to access your webpage like the one below.
 
@@ -331,6 +319,11 @@ Status: Downloaded newer image for httpd:latest
 6. You can then access your website by adding an index.html towards the end of your url link, like the one below. 
 
  <img src="./images/helloworldweb.png" width="70%">
+
+
+This is BilisMerah webpage
+
+<img src="./images/webshark.png" width="40%">
 
 ***Questions:***
 
