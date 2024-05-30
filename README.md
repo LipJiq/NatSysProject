@@ -818,8 +818,8 @@ __- The network address for c1 is 172.18.0.2 while c2 is 172.19.0.2__.
     __- I can ping to c2 gateway but cannot ping to c2 network address__.
 
 ```bash
-
-
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $docker exec c1 ping c2
+ping: bad address 'c2'
 ```
 
 ## Bridging two SUB Networks
@@ -837,7 +837,7 @@ docker exec c1 ping c2
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network connect bridgenet c1
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network connect bridgenet c2
 
-@LipJiq ➜ /workspaces/NatSysProject (main) $ docker network ls
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network ls
 NETWORK ID     NAME        DRIVER    SCOPE
 7659b036408f   bluenet     bridge    local
 17f7d65ff1c7   bridge      bridge    local
@@ -846,14 +846,13 @@ NETWORK ID     NAME        DRIVER    SCOPE
 a43df4244db8   none        null      local
 c38e0c04e871   rednet      bridge    local
 
-@LipJiq ➜ /workspaces/NatSysProject (main) $ docker exec c1 ping c2
+@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping c2
 PING c2 (172.20.0.3): 56 data bytes
-64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.097 ms
-64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.092 ms
-64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.093 ms
-64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.104 ms
-64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.087 ms
-64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.101 ms
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.098 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.091 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.107 ms
+64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.095 ms
+64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.094 ms
 ^C
 
 ```
