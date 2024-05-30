@@ -241,7 +241,7 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** 
 
-__The user is root and the group also root, while the permission give owner, group and others to read and write only. All of them cannot execute__.
+    __The user is root and the group also root, while the permission give owner, group and others to read and write only. All of them cannot execute__.
 
 ```bash 
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker run --detach -it -v /workspaces/NatSysProject/myroot:/root debian
