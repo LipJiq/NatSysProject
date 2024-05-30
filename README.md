@@ -327,9 +327,22 @@ This is BilisMerah webpage
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Everyone can read and write at all files but cannot execute them. The user id for the owner is 1000 and group id is 1000 where it belongs to codespace__.
-2. What port is the apache web server running. ***(1 mark)*** port 80
-3. What port is open for http protocol on the host machine? ***(1 mark)*** port 8080
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** 
+
+    __Everyone can read and write at all files but cannot execute them. The user id for the owner is 1000 and group id is 1000 where it belongs to codespace__.
+    ```
+    @LipJiq ➜ /workspaces/NatSysProject/webpage (main) $ docker exec -it 5785f03e2602 ls -l /usr/local/apache2/htdocs
+    total 108
+    -rw-rw-rw- 1 1000 1000 102466 May 30 08:00 blue-sharks.jpg
+    -rw-rw-rw- 1 1000 1000    577 May 30 08:17 index.html
+    ```
+2. What port is the apache web server running. ***(1 mark)*** 
+
+    __port 80__
+
+3. What port is open for http protocol on the host machine? ***(1 mark)*** 
+
+    __port 8080__
 
 ## Create SUB Networks
 
