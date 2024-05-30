@@ -23,7 +23,7 @@ Team Mates:
 ***Questions:***
 
 1. What is the link of the fork Net&Sys Assignment in your repository. ***(1 mark)*** __https://github.com/LipJiq/NatSysProject.git__.
-2. How many files and folders are in this repository. ***(1 mark)*** __Fill answer here__.
+2. How many files and folders are in this repository. ***(1 mark)*** __Before edit it have 1 file and 1 folder, after we do all task, now it have 3 folder and 1 file__.
 
 
 ## Exploring github codespaces
