@@ -270,7 +270,7 @@ total 16
 sudo chown -R codespace:codespace myroot
 
 ```
-*** __Fill answer here__.***
+*** __Yes i have change the permission of the files to user codespace. The user now can execute the file__.***
 ```bash
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ ls -asl
 total 16
