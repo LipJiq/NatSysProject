@@ -815,7 +815,7 @@ __- The network address for c1 is 172.18.0.2 while c2 is 172.19.0.2__.
 
 5. Using the command ```docker exec c1 ping c2```, which basically issue a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)***
 
-    __- I can ping to c2 gateway but cannot ping to c2 network address__.
+    __- I cannot ping, is show bad address 'c2'__.
 
 ```bash
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $docker exec c1 ping c2
