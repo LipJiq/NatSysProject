@@ -55,9 +55,19 @@ Team Mates:
 
 ***Questions:***
 
-1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** __Linux - Ubuntu__.
-2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** __Fill answer here__.
-3. Why must we commit and sync our current work on source control? ***(1 mark)*** __Fill answer here__.
+1. What is default OS used to run the virtual environment for codespaces. ***(1 mark)*** 
+
+    __Linux - Ubuntu__.
+
+2. What are the two options of RAM, disk and vcpu configuration you can have in running codespaces . ***(1 mark)*** 
+
+    __Option 1: 2-core, 8GB RAM, 32GB__.
+
+    __Option 2: 4-core. 16GB RAM, 32GB__.
+
+3. Why must we commit and sync our current work on source control? ***(1 mark)*** 
+
+    __Commit and sync our current work on source control is crucial for several reasons. It provides version control, allowing us to track changes, revert to previous states if something goes wrong, and understand the evolution of the project. It enhances collaboration by sharing progress within team, resolving conflicts early, and preventing duplicated efforts. Syncing acts as a remote backup, protecting our work against local machine failures. Additionally, it facilitates continuous integration and deployment, enabling automated testing and smooth deployment of changes. The audit trail created by commits ensures accountability and allows for thorough code reviews__.
 
 ## Exploring the Terminal
 
@@ -808,19 +818,8 @@ __- The network address for c1 is 172.18.0.2 while c2 is 172.19.0.2__.
     __- I can ping to c2 gateway but cannot ping to c2 network address__.
 
 ```bash
-@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping 172.19.0.2
-^C
 
-@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping 172.19.0.1
-PING 172.19.0.1 (172.19.0.1): 56 data bytes
-64 bytes from 172.19.0.1: seq=0 ttl=64 time=0.074 ms
-64 bytes from 172.19.0.1: seq=1 ttl=64 time=0.081 ms
-64 bytes from 172.19.0.1: seq=2 ttl=64 time=0.054 ms
-64 bytes from 172.19.0.1: seq=3 ttl=64 time=0.059 ms
-64 bytes from 172.19.0.1: seq=4 ttl=64 time=0.078 ms
-64 bytes from 172.19.0.1: seq=5 ttl=64 time=0.089 ms
-64 bytes from 172.19.0.1: seq=6 ttl=64 time=0.058 ms
-^C
+
 ```
 
 ## Bridging two SUB Networks
@@ -838,26 +837,25 @@ docker exec c1 ping c2
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network connect bridgenet c1
 @LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network connect bridgenet c2
 
-@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker network ls
+@LipJiq ➜ /workspaces/NatSysProject (main) $ docker network ls
 NETWORK ID     NAME        DRIVER    SCOPE
 7659b036408f   bluenet     bridge    local
-861bbcf594e5   bridge      bridge    local
+17f7d65ff1c7   bridge      bridge    local
 7adb5970c039   bridgenet   bridge    local
 0d1b3df49e0f   host        host      local
 a43df4244db8   none        null      local
 c38e0c04e871   rednet      bridge    local
 
-@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping 172.19.0.1
-PING 172.19.0.1 (172.19.0.1): 56 data bytes
-64 bytes from 172.19.0.1: seq=0 ttl=64 time=0.082 ms
-64 bytes from 172.19.0.1: seq=1 ttl=64 time=0.077 ms
-64 bytes from 172.19.0.1: seq=2 ttl=64 time=0.113 ms
-64 bytes from 172.19.0.1: seq=3 ttl=64 time=0.073 ms
-64 bytes from 172.19.0.1: seq=4 ttl=64 time=0.071 ms
+@LipJiq ➜ /workspaces/NatSysProject (main) $ docker exec c1 ping c2
+PING c2 (172.20.0.3): 56 data bytes
+64 bytes from 172.20.0.3: seq=0 ttl=64 time=0.097 ms
+64 bytes from 172.20.0.3: seq=1 ttl=64 time=0.092 ms
+64 bytes from 172.20.0.3: seq=2 ttl=64 time=0.093 ms
+64 bytes from 172.20.0.3: seq=3 ttl=64 time=0.104 ms
+64 bytes from 172.20.0.3: seq=4 ttl=64 time=0.087 ms
+64 bytes from 172.20.0.3: seq=5 ttl=64 time=0.101 ms
 ^C
 
-@LipJiq ➜ /workspaces/NatSysProject/myroot (main) $ docker exec c1 ping 172.19.0.2
-^C
 ```
 ## What to submit
 
